@@ -1,5 +1,5 @@
 {
-	"name": "silverstripe/payment_instore",
+	"name": "sunnysideup/payment_instore",
 	"type": "silverstripe-module",
 	"description": "add in-store payment to your silverstripe e-commerce application",
 	"homepage": "http://www.silverstripe-ecommerce.com",
