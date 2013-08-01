@@ -16,7 +16,7 @@
 	"require":{
 		"php": ">=5.3.2",
 		"silverstripe/framework": ">=2.4.0",
-		"silverstripe/ecommerce": ">=2.4.0",
+		"sunnysideup/ecommerce": "~2",
 		"silverstripe/payment": ">=2.4.0"
 	}
 }
