@@ -7,7 +7,7 @@
  */
 class InStorePayment extends ChequePayment {
 
-	protected static $custom_message_for_in_store_payment = "";
+	private static $custom_message_for_in_store_payment = "";
 		static function set_custom_message_for_in_store_payment($v) {self::$custom_message_for_in_store_payment = $v;}
 
 	/**
@@ -16,7 +16,7 @@ class InStorePayment extends ChequePayment {
 	function processPayment($data, $form) {
 		$this->Status = 'Pending';
 		if(!self::$custom_message_for_in_store_payment) {
-			$page = DataObject::get_one("CheckoutPage");
+			$page = CheckoutPage::get()->first();
 			if($page) {
 				self::$custom_message_for_in_store_payment = $page->ChequeMessage;
 			}
@@ -27,7 +27,7 @@ class InStorePayment extends ChequePayment {
 	}
 
 	function getPaymentFormFields() {
-		return new FieldSet(
+		return new FieldList(
 			new HiddenField("InStore", "InStore", 0)
 		);
 	}
