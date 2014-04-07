@@ -1,7 +1,6 @@
-###############################################
+
 Instore Payment
-Pre 0.1 proof of concept
-###############################################
+================================================================================
 
 Allows the e-commerce customer to choose the
 "pay in store" (or pay on pick up) payment option.
