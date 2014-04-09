@@ -8,7 +8,6 @@
 class InStorePayment extends ChequePayment {
 
 	private static $custom_message_for_in_store_payment = "";
-		static function set_custom_message_for_in_store_payment($v) {self::$custom_message_for_in_store_payment = $v;}
 
 	/**
 	 * Process the In Store payment method
@@ -21,7 +20,7 @@ class InStorePayment extends ChequePayment {
 				self::$custom_message_for_in_store_payment = $page->ChequeMessage;
 			}
 		}
-		$this->Message = self::$custom_message_for_in_store_payment;
+		$this->Message = Config::inst()->get("InStorePayment", "custom_message_for_in_store_payment");
 		$this->write();
 		return new Payment_Success();
 	}
