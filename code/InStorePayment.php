@@ -5,7 +5,7 @@
  * @author Nicolaas [at] sunnysideup.co.nz
  * @package payment
  */
-class InStorePayment extends ChequePayment {
+class InStorePayment extends EcommercePayment {
 
 	private static $custom_message_for_in_store_payment = "";
 
@@ -14,12 +14,6 @@ class InStorePayment extends ChequePayment {
 	 */
 	function processPayment($data, $form) {
 		$this->Status = 'Pending';
-		if(!self::$custom_message_for_in_store_payment) {
-			$page = CheckoutPage::get()->first();
-			if($page) {
-				self::$custom_message_for_in_store_payment = $page->ChequeMessage;
-			}
-		}
 		$this->Message = Config::inst()->get("InStorePayment", "custom_message_for_in_store_payment");
 		$this->write();
 		return new Payment_Success();
