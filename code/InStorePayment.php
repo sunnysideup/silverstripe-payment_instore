@@ -16,7 +16,7 @@ class InStorePayment extends EcommercePayment {
 		$this->Status = 'Pending';
 		$this->Message = Config::inst()->get("InStorePayment", "custom_message_for_in_store_payment");
 		$this->write();
-		return new Payment_Success();
+		return EcommercePayment_Success::create();
 	}
 
 	function getPaymentFormFields() {
