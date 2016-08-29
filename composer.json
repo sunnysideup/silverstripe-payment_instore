@@ -1,22 +1,30 @@
 {
-	"name": "sunnysideup/payment_instore",
-	"type": "silverstripe-module",
-	"description": "add in-store payment to your silverstripe e-commerce application",
-	"homepage": "http://www.silverstripe-ecommerce.com",
-	"keywords": ["ecommerce", "e-commerce", "shop", "cart", "instore", "in store", "silverstripe", "instore payment", "pay later"],
-	"license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
-	"authors":[
-		{
-			"name": "Nicolaas Francken",
-			"homepage": "https://github.com/sunnysideup",
-			"email" : "modules@sunnysideup.co.nz",
-			"role" : "lead developer"
-		}
-	],
-	"require":{
-		"sunnysideup/ecommerce": "dev-master"
-	},
-	"extra": {
-		"installer-name": "payment_instore"
-	}
+    "name": "sunnysideup/payment_instore",
+    "type": "silverstripe-module",
+    "description": "add in-store payment to your silverstripe e-commerce application",
+    "keywords": [
+        "ecommerce",
+        "e-commerce",
+        "shop",
+        "cart",
+        "instore",
+        "in store",
+        "silverstripe",
+        "instore payment",
+        "pay later"
+    ],
+    "license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
+    "authors": [
+        {
+            "name": "Nicolaas Francken",
+            "email": "modules@sunnysideup.co.nz",
+            "role": "lead developer"
+        }
+    ],
+    "require": {
+        "sunnysideup/ecommerce": "dev-master"
+    },
+    "extra": {
+        "installer-name": "payment_instore"
+    }
 }
