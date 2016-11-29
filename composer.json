@@ -3,13 +3,15 @@
     "type": "silverstripe-module",
     "description": "add in-store payment to your silverstripe e-commerce application",
     "keywords": [
+        "Silverstripe-CMS",
+        "CMS",
+        "Silverstripe",
         "ecommerce",
         "e-commerce",
         "shop",
         "cart",
         "instore",
         "in store",
-        "silverstripe",
         "instore payment",
         "pay later"
     ],
@@ -22,7 +24,9 @@
         }
     ],
     "require": {
-        "sunnysideup/ecommerce": "dev-master"
+        "sunnysideup/ecommerce": "*",
+        "silverstripe/framework": "~3.1",
+        "silverstripe/cms": "~3.1"
     },
     "extra": {
         "installer-name": "payment_instore"
