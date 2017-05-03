@@ -15,7 +15,7 @@
 
  * [Developer Docs](docs/en/INDEX.md)
  * [User Guide](docs/en/userguide.md)
- * [API Docs](http://docs.ssmods.com/sunnysideup/payment_instore)
+ * [API Docs](http://docs.ssmods.com/sunnysideup/payment_instore/classes.xhtml)
 
 ## Requirements
 
