@@ -20,7 +20,7 @@ class InStorePayment extends EcommercePayment
         return EcommercePayment_Success::create();
     }
 
-    public function getPaymentFormFields()
+    public function getPaymentFormFields($amount = 0, $order = null)
     {
         return new FieldList(
             new HiddenField("InStore", "InStore", 0)
