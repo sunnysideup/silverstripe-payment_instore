@@ -27,7 +27,5 @@
         "sunnysideup/ecommerce": "*",
         "silverstripe/recipe-cms": "^4.4"
     },
-    "extra": {
-        "installer-name": "payment_instore"
-    }
+    "extra": []
 }
