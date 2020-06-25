@@ -2,11 +2,18 @@
 
 namespace Sunnysideup\PaymentInstore;
 
-use EcommercePayment;
-use Config;
-use EcommercePaymentSuccess;
-use FieldList;
-use HiddenField;
+
+
+
+
+
+use SilverStripe\Core\Config\Config;
+use Sunnysideup\PaymentInstore\InStorePayment;
+use Sunnysideup\Ecommerce\Money\Payment\PaymentResults\EcommercePaymentSuccess;
+use SilverStripe\Forms\HiddenField;
+use SilverStripe\Forms\FieldList;
+use Sunnysideup\Ecommerce\Model\Money\EcommercePayment;
+
 
 
 /**
@@ -24,7 +31,7 @@ class InStorePayment extends EcommercePayment
     public function processPayment($data, $form)
     {
         $this->Status = 'Pending';
-        $this->Message = Config::inst()->get("InStorePayment", "custom_message_for_in_store_payment");
+        $this->Message = Config::inst()->get(InStorePayment::class, "custom_message_for_in_store_payment");
         $this->write();
         return EcommercePaymentSuccess::create();
     }
