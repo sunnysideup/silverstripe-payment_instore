@@ -32,3 +32,4 @@ class InStorePayment extends EcommercePayment
         return null;
     }
 }
+
