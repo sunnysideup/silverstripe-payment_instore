@@ -1,6 +1,6 @@
 {
     "name": "sunnysideup/payment_instore",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "description": "add in-store payment to your silverstripe e-commerce application",
     "keywords": [
         "Silverstripe-CMS",
@@ -25,10 +25,12 @@
     ],
     "require": {
         "sunnysideup/ecommerce": "*",
-        "silverstripe/framework": "~3.6",
-        "silverstripe/cms": "~3.6"
+        "silverstripe/recipe-cms": "^4.4"
     },
-    "extra": {
-        "installer-name": "payment_instore"
+    "extra": [],
+    "autoload": {
+        "psr-4": {
+            "Sunnysideup\\PaymentInstore\\": "src/"
+        }
     }
 }
