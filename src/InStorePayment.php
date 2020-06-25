@@ -1,5 +1,14 @@
 <?php
 
+namespace Sunnysideup\PaymentInstore;
+
+use EcommercePayment;
+use Config;
+use EcommercePaymentSuccess;
+use FieldList;
+use HiddenField;
+
+
 /**
  * Payment object representing an In Store Payment (order online and pick-up in store).
  * @author Nicolaas [at] sunnysideup.co.nz
