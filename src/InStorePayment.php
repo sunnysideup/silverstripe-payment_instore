@@ -12,21 +12,24 @@ use Sunnysideup\Ecommerce\Money\Payment\PaymentResults\EcommercePaymentSuccess;
 
 /**
  * Payment object representing an In Store Payment (order online and pick-up in store).
+ *
  * @author Nicolaas [at] sunnysideup.co.nz
- * @package payment
  */
 class InStorePayment extends EcommercePayment
 {
     private static $custom_message_for_in_store_payment = '';
 
     /**
-     * Process the In Store payment method
+     * Process the In Store payment method.
+     *
+     * @param mixed $data
      */
     public function processPayment($data, OrderForm $form)
     {
         $this->Status = 'Pending';
         $this->Message = Config::inst()->get(InStorePayment::class, 'custom_message_for_in_store_payment');
         $this->write();
+
         return EcommercePaymentSuccess::create();
     }
 
