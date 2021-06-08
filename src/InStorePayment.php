@@ -4,6 +4,7 @@ namespace Sunnysideup\PaymentInstore;
 
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\Form;
 use SilverStripe\Forms\HiddenField;
 use Sunnysideup\Ecommerce\Forms\OrderForm;
 use Sunnysideup\Ecommerce\Model\Money\EcommercePayment;
@@ -24,7 +25,7 @@ class InStorePayment extends EcommercePayment
      *
      * @param mixed $data
      */
-    public function processPayment($data, OrderForm $form)
+    public function processPayment($data, Form $form)
     {
         $this->Status = 'Pending';
         $this->Message = Config::inst()->get(InStorePayment::class, 'custom_message_for_in_store_payment');
