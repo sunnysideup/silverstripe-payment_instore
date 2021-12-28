@@ -26,7 +26,7 @@ class InStorePayment extends EcommercePayment
      */
     public function processPayment($data, Form $form)
     {
-        $this->Status = 'Pending';
+        $this->Status = EcommercePayment::PENDING_STATUS;
         $this->Message = Config::inst()->get(InStorePayment::class, 'custom_message_for_in_store_payment');
         $this->write();
 
