@@ -1,36 +1,36 @@
 {
-  "name": "sunnysideup/payment_instore",
-  "type": "silverstripe-vendormodule",
-  "description": "add in-store payment to your silverstripe e-commerce application",
-  "keywords": [
-    "Silverstripe-CMS",
-    "CMS",
-    "Silverstripe",
-    "ecommerce",
-    "e-commerce",
-    "shop",
-    "cart",
-    "instore",
-    "in store",
-    "instore payment",
-    "pay later"
-  ],
-  "license": "BSD-3-Clause",
-  "authors": [
-    {
-      "name": "Nicolaas Francken",
-      "email": "modules@sunnysideup.co.nz",
-      "role": "lead developer"
+    "name": "sunnysideup/payment_instore",
+    "type": "silverstripe-vendormodule",
+    "description": "add in-store payment to your silverstripe e-commerce application",
+    "keywords": [
+        "Silverstripe-CMS",
+        "CMS",
+        "Silverstripe",
+        "ecommerce",
+        "e-commerce",
+        "shop",
+        "cart",
+        "instore",
+        "in store",
+        "instore payment",
+        "pay later"
+    ],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Nicolaas Francken",
+            "email": "modules@sunnysideup.co.nz",
+            "role": "lead developer"
+        }
+    ],
+    "require": {
+        "sunnysideup/ecommerce": "^33.0",
+        "silverstripe/recipe-cms": "^6.0"
+    },
+    "extra": [],
+    "autoload": {
+        "psr-4": {
+            "Sunnysideup\\PaymentInstore\\": "src/"
+        }
     }
-  ],
-  "require": {
-    "sunnysideup/ecommerce": "5.x-dev",
-    "silverstripe/recipe-cms": "^4.0 || ^5.0"
-  },
-  "extra": [],
-  "autoload": {
-    "psr-4": {
-      "Sunnysideup\\PaymentInstore\\": "src/"
-    }
-  }
 }

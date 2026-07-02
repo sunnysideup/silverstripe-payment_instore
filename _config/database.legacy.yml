@@ -1,3 +1,4 @@
-SilverStripe\ORM\DatabaseAdmin:
+
+SilverStripe\Dev\DbBuild:
   classname_value_remapping:
     InStorePayment: Sunnysideup\PaymentInstore\InStorePayment

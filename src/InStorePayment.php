@@ -2,6 +2,7 @@
 
 namespace Sunnysideup\PaymentInstore;
 
+use Override;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\Form;
@@ -16,6 +17,8 @@ use Sunnysideup\Ecommerce\Money\Payment\PaymentResults\EcommercePaymentSuccess;
  */
 class InStorePayment extends EcommercePayment
 {
+    private static $table_name = 'InStorePayment';
+
     private static $custom_message_for_in_store_payment = '';
 
     /**
@@ -23,6 +26,7 @@ class InStorePayment extends EcommercePayment
      *
      * @param mixed $data
      */
+    #[Override]
     public function processPayment($data, Form $form)
     {
         $this->Status = EcommercePayment::PENDING_STATUS;
@@ -32,15 +36,14 @@ class InStorePayment extends EcommercePayment
         return EcommercePaymentSuccess::create();
     }
 
+    #[Override]
     public function getPaymentFormFields($amount = 0, ?Order $order = null): FieldList
     {
-        $msg = _t(__CLASS__ . 'PAY_IN_STORE', 'Pay in Store');
-        return new FieldList(
-            HiddenField::create('InStore', 'InStore', 0),
-            LiteralField::create('PayInStore', '<div>' . $msg . '</div>')
-        );
+        $msg = _t(self::class . 'PAY_IN_STORE', 'Pay in Store');
+        return FieldList::create(HiddenField::create('InStore', 'InStore', 0), LiteralField::create('PayInStore', '<div>' . $msg . '</div>'));
     }
 
+    #[Override]
     public function getPaymentFormRequirements(): array
     {
         return [];
